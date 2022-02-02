@@ -12,6 +12,10 @@ class _HomeState extends State<Home> {
   // Attributes
 
   // Methods
+  void _openBusiness()
+  {
+
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,28 +32,62 @@ class _HomeState extends State<Home> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
+
             // Image
-            Image.asset("name"),
-            
-            // Row
-            Row(
-              children: <Widget>[
-                // Image
-                Image.asset("name"),
-                // Image
-                Image.asset("name"),
-              ],
+            Image.asset("images/logo.png"),
+
+            Padding(
+              padding: const EdgeInsets.all(15),
+              child: 
+              // Row
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+
+                  GestureDetector(
+                    onTap: _openBusiness,
+                    child: 
+                      // Image
+                      Image.asset("images/business_menu.png"),
+                  ),
+
+                  GestureDetector(
+                    onTap: _openBusiness,
+                    child: 
+                      // Image
+                      Image.asset("images/service_menu.png"),
+                  ),
+
+                ],
+              ),
             ),
-              
-            // Row
-            Row(
-              children: <Widget>[
-                // Image
-                Image.asset("name"),
-                // Image
-                Image.asset("name"),
-              ],
+
+            Padding(
+              padding: const EdgeInsets.all(15),
+              child: 
+              // Row
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+
+                  GestureDetector(
+                    onTap: _openBusiness,
+                    child: 
+                      // Image
+                      Image.asset("images/client_menu.png"),
+                  ),
+
+                  GestureDetector(
+                    onTap: _openBusiness,
+                    child: 
+                      // Image
+                      Image.asset("images/contact_menu.png"),
+                  ),
+
+                ],
+              ),
             ),
+
           ],
         ),
       ),
