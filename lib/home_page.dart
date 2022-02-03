@@ -1,3 +1,7 @@
+import 'package:atm_consulting/business_page.dart';
+import 'package:atm_consulting/client_page.dart';
+import 'package:atm_consulting/contact_page.dart';
+import 'package:atm_consulting/service_page.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget {
@@ -9,12 +13,32 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
-  // Attributes
-
-  // Methods
   void _openBusiness()
   {
+    Navigator.push(
+      context, 
+      MaterialPageRoute(builder: (context) => const BusinessPage() ));
+  }
 
+  void _openService()
+  {
+    Navigator.push(
+      context, 
+      MaterialPageRoute(builder: (context) => const ServicePage() ));
+  }
+
+  void _openClient()
+  {
+    Navigator.push(
+      context, 
+      MaterialPageRoute(builder: (context) => const ClientPage() ));
+  }
+
+  void _openContact()
+  {
+    Navigator.push(
+      context, 
+      MaterialPageRoute(builder: (context) => const ContactPage() ));
   }
 
   @override
@@ -22,7 +46,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text("ATM Consulting"),
+        title: const Text("ATM Consulting"), centerTitle: true,
         backgroundColor: Colors.green,
       ),
 
@@ -52,7 +76,7 @@ class _HomeState extends State<Home> {
                   ),
 
                   GestureDetector(
-                    onTap: _openBusiness,
+                    onTap: _openService,
                     child: 
                       // Image
                       Image.asset("images/service_menu.png"),
@@ -71,14 +95,14 @@ class _HomeState extends State<Home> {
                 children: <Widget>[
 
                   GestureDetector(
-                    onTap: _openBusiness,
+                    onTap: _openClient,
                     child: 
                       // Image
                       Image.asset("images/client_menu.png"),
                   ),
 
                   GestureDetector(
-                    onTap: _openBusiness,
+                    onTap: _openContact,
                     child: 
                       // Image
                       Image.asset("images/contact_menu.png"),
